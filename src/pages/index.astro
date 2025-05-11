@@ -1,0 +1,65 @@
+---
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog")).sort((a, b) => {
+  return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+});
+---
+
+<BaseLayout title="Inicio">
+  <main
+    class="w-full max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-[3fr_1fr] gap-10"
+  >
+    <!-- 📘 Panel izquierdo (75%) -->
+    <section class="space-y-12">
+      {
+        posts.map((post) => {
+          const { title, date, excerpt, image } = post.data;
+          return (
+            <article class="bg-gray-800 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all">
+              <a href={`/blog/${post.slug}`} class="block hover:opacity-90 transition-all duration-300 no-underline">
+                {image && (
+                  <img src={image} alt={title} class="w-full h-64 object-cover" />
+                )}
+                <div class="p-6">
+                  <h2 class="text-2xl font-bold text-blue-400 mb-2 font-orbitron no-underline">
+                    {title}
+                  </h2>
+                  <p class="text-sm text-gray-400 italic mb-4 no-underline">
+                    {new Date(date).toLocaleDateString("es-ES", {
+                      weekday: "long",
+                      day: "2-digit",
+                      month: "long",
+                      year: "numeric",
+                    })}
+                  </p>
+                  <p class="text-gray-300 mb-2 no-underline">{excerpt}</p>
+                  <span class="text-sm text-blue-300 ">Leer más →</span>
+                </div>
+              </a>
+            </article>
+          );
+        })
+      }
+    </section>
+
+    <!-- 📋 Sidebar derecho (25%) solo visible desde pantallas medianas -->
+    <aside class="space-y-4 sticky top-10 self-start hidden md:block">
+      <h2 class="text-white text-2xl font-orbitron mb-4">Entradas recientes</h2>
+      <ul class="text-sm space-y-2">
+        {
+          posts
+            .slice(0, 20)
+            .map((post) => (
+              <li>
+                <a href={`/blog/${post.slug}`} class="hover:underline text-white">
+                  {post.data.title}
+                </a>
+              </li>
+            ))
+        }
+      </ul>
+    </aside>
+  </main>
+</BaseLayout>
