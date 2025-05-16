@@ -2,7 +2,6 @@
 title: "Mi segunda entrada"
 date: 2025-05-09
 excerpt: "Una breve introducción al blog y lo que podrás encontrar aquí."
-image: "/images/logo-heyjulian.png"
 ---
 
 ¡Hola! Este es el contenido de tu segundo post escrito en Markdown.

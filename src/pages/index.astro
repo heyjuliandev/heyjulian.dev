@@ -8,25 +8,45 @@ const posts = (await getCollection("blog")).sort((a, b) => {
 ---
 
 <BaseLayout title="Inicio">
-  <main
-    class="w-full max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-[3fr_1fr] gap-10"
-  >
-    <!-- 📘 Panel izquierdo (75%) -->
+  <main class="w-full max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-[3fr_1fr] gap-10">
+    
+    <!-- 📘 Panel izquierdo -->
     <section class="space-y-12">
       {
         posts.map((post) => {
           const { title, date, excerpt, image } = post.data;
           return (
             <article class="bg-gray-800 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all">
-              <a href={`/blog/${post.slug}`} class="block hover:opacity-90 transition-all duration-300 no-underline">
-                {image && (
-                  <img src={image} alt={title} class="w-full h-64 object-cover" />
+              <a
+                href={`/blog/${post.slug}`}
+                class="block md:flex md:items-center hover:opacity-90 transition-all duration-300 no-underline"
+              >
+                {image ? (
+                  <img
+                    src={image}
+                    alt={title}
+                    class="w-full h-64 object-cover md:w-64 md:h-64 md:rounded-l-2xl"
+                  />
+                ) : (
+                  <div class="w-full h-64 md:w-64 md:h-64 bg-gray-700 flex items-center justify-center md:rounded-l-2xl">
+                    <!-- Icono SVG -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-16 w-16 text-blue-400"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M9 12h6m-6 4h6m2 4H7a2 2 0 01-2-2V6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v12a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
                 )}
-                <div class="p-6">
-                  <h2 class="text-2xl font-bold text-blue-400 mb-2 font-orbitron no-underline">
+
+                <div class="p-6 md:p-8 md:flex-1 md:flex md:flex-col md:justify-center">
+                  <h2 class="text-2xl font-bold text-blue-400 mb-2 font-orbitron">
                     {title}
                   </h2>
-                  <p class="text-sm text-gray-400 italic mb-4 no-underline">
+                  <p class="text-sm text-gray-400 italic mb-4">
                     {new Date(date).toLocaleDateString("es-ES", {
                       weekday: "long",
                       day: "2-digit",
@@ -34,8 +54,8 @@ const posts = (await getCollection("blog")).sort((a, b) => {
                       year: "numeric",
                     })}
                   </p>
-                  <p class="text-gray-300 mb-2 no-underline">{excerpt}</p>
-                  <span class="text-sm text-blue-300 ">Leer más →</span>
+                  <p class="text-gray-300 mb-2">{excerpt}</p>
+                  <span class="text-sm text-blue-300">Leer más →</span>
                 </div>
               </a>
             </article>
@@ -44,7 +64,7 @@ const posts = (await getCollection("blog")).sort((a, b) => {
       }
     </section>
 
-    <!-- 📋 Sidebar derecho (25%) solo visible desde pantallas medianas -->
+    <!-- 📋 Sidebar derecho solo en escritorio -->
     <aside class="space-y-4 sticky top-10 self-start hidden md:block">
       <h2 class="text-white text-2xl font-orbitron mb-4">Entradas recientes</h2>
       <ul class="text-sm space-y-2">

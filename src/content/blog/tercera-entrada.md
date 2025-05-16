@@ -2,7 +2,6 @@
 title: "Mi tercera entrada"
 date: 2025-05-10
 excerpt: "Una breve introducción al blog y lo que podrás encontrar aquí."
-image: "/images/logo-heyjulian.png"
 ---
 
 ¡Hola! Este es el contenido de tu tercera post escrito en Markdown.
