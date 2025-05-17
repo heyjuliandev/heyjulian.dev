@@ -1,24 +1,38 @@
 ---
-title: "Mi primera entrada"
-date: 2025-05-08
+title: "¡Bienvenidos a heyjulian.dev!"
+date: 2025-05-17
 slug: "primera-entrada"
-excerpt: "Una breve introducción al blog."
+excerpt: "Descubre qué encontrarás en este blog, cómo está construido y qué propósito tiene esta aventura digital."
+image: "/images/blog-bienvenida.png"
 ---
 
-# Bienvenido al Post de Prueba
+¡Hola! Me alegra muchísimo darte la bienvenida a **heyjulian.dev**, un espacio creado con cariño, código y muchas ganas de compartir.
 
-Este es un contenido de prueba para verificar que el sistema de Markdown y el slug `[slug].astro` funcionan correctamente.
+### 🌐 ¿Qué es este blog?
 
-## Sección 1: Introducción
+Este blog está construido con **Astro** y usa **Markdown** para las publicaciones. Eso quiere decir que todo el contenido es fácil de mantener, ligero y pensado para ofrecerte una lectura fluida, sin complicaciones.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
+El diseño está hecho a medida, con un enfoque **oscuro, moderno y minimalista**, adaptado para que se vea genial tanto en escritorio como en móvil. También incluye funcionalidades como entradas recientes, tarjetas visuales y navegación clara.
 
-## Sección 2: Detalles
+### 🧠 ¿Qué encontrarás aquí?
 
-- **Punto 1:** Lorem ipsum dolor sit amet.
-- **Punto 2:** Consectetur adipiscing elit.
-- **Punto 3:** Integer nec odio.
+Este blog nace con la intención de compartir:
 
-## Conclusión
+- Mis proyectos personales y profesionales.
+- Reflexiones sobre desarrollo web, diseño y productividad.
+- Experimentos creativos, ideas y retos.
 
-Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam.
+### 🎯 ¿Por qué heyjulian.dev?
+
+Porque es más que un dominio: es un lugar donde volcar lo aprendido, documentar el camino y conectar contigo, que estás al otro lado leyendo esto.
+
+### 🔧 ¿Cómo funciona?
+
+Cada entrada del blog es un archivo `.md` (Markdown). Eso significa que escribir una entrada es tan sencillo como redactar texto plano, añadiendo título, fecha, resumen y contenido. La web se encarga de mostrarlo con estilo.
+
+### 🙌 Gracias por estar aquí
+
+Si has llegado hasta aquí, gracias por acompañarme. Espero que encuentres contenido interesante, útil y, sobre todo, cercano.
+
+Nos leemos pronto.  
+**Julián**
