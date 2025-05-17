@@ -8,14 +8,17 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^6.0.2",
-    "@astrojs/vercel": "^8.0.4",
-    "astro": "^5.7.12",
+    "@astrojs/vercel": "^8.1.4",
+    "astro": "^5.7.13",
     "tailwindcss": "^3.4.17",
     "tslib": "^2.8.1"
   },
   "devDependencies": {
-    "@types/node": "^22.15.17",
+    "@types/node": "^22.15.18",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3"
+  },
+  "overrides": {
+    "path-to-regexp": "^6.3.0"
   }
 }
