@@ -2,12 +2,13 @@
 import "../styles.css";
 import Header from "~/components/Header.astro";
 import Footer from "~/components/Footer.astro";
-import Analytics from '@vercel/analytics/astro'
+import ScrollToTop from "../components/ScrollToTop.jsx";
+import Analytics from "@vercel/analytics/astro";
 const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es" class="dark">
+<html lang="es" class="dark overflow-y-scroll">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,16 +21,20 @@ const { title } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap"
       rel="stylesheet"
     />
+
     <title>{title}</title>
   </head>
   <body
     class="bg-gray-900 text-gray-100 font-sans leading-relaxed tracking-wide"
   >
     <Header />
+
     <main class="main-container mx-auto px-6 py-10">
       <slot />
     </main>
+
     <Footer />
-    <Analytics/>
+    <Analytics />
+    <ScrollToTop client:only="react" />
   </body>
 </html>
