@@ -1,7 +1,75 @@
 ---
-import BaseLayout from '~/layouts/BaseLayout.astro';
+import BaseLayout from "~/layouts/BaseLayout.astro";
 ---
+
 <BaseLayout title="Sobre mí">
-  <h1 class="text-2xl font-semibold mb-2">Sobre mí</h1>
-  <p>Este es el apartado donde hablo de mí o de mi proyecto.</p>
+  <section class="w-[95%] max-w-7xl mx-auto px-4 py-12 space-y-8">
+    <div class="flex flex-col md:flex-row items-center md:items-start gap-12">
+      <!-- Imagen -->
+      <div class="flex-shrink-0 w-full md:w-1/3">
+        <img
+          src="/images/avatar-julian.png"
+          alt="Ilustración de Julian programando"
+          class="rounded-xl shadow-2xl w-full custom-glow"
+        />
+      </div>
+
+      <!-- Texto -->
+      <div class="md:w-2/3 text-left space-y-6">
+        <h2 class="text-3xl font-bold text-blue-400 font-orbitron">
+          👨‍💻 Sobre mí
+        </h2>
+
+        <p class="text-gray-300 leading-relaxed text-justify">
+          ¡Hola! Soy Julian, un apasionado del desarrollo web con una mezcla de
+          creatividad, lógica y un toque de café ☕.
+        </p>
+        <p class="text-gray-300 leading-relaxed text-justify">
+          Este sitio nace como un espacio personal donde puedo compartir lo que
+          aprendo, los proyectos en los que trabajo y algunas reflexiones sobre
+          desarrollo, diseño y productividad.
+        </p>
+
+        <h3 class="text-2xl font-semibold text-blue-300 mt-8">
+          🛠️ Tecnologías que me acompañan
+        </h3>
+        <ul class="list-disc list-inside text-gray-300 space-y-2 pl-4">
+          <li>
+            <strong class="text-blue-400">React</strong> ⚛️ — para construir interfaces
+            dinámicas y escalables.
+          </li>
+          <li>
+            <strong class="text-blue-400">Astro</strong> 🚀 — porque me permite crear
+            sitios ultrarrápidos con una arquitectura limpia.
+          </li>
+          <li>
+            <strong class="text-blue-400">Tailwind CSS</strong> 🎨 — para diseñar
+            sin fricción, con un sistema de estilos elegante y potente.
+          </li>
+          <li>
+            <strong class="text-blue-400">Node.js</strong> 🌐 — mi base para todo
+            lo relacionado con el backend.
+          </li>
+          <li>
+            <strong class="text-blue-400">MongoDB</strong> 🍃 — para estructurar
+            los datos con flexibilidad.
+          </li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-blue-300 mt-8">
+          📍¿Qué puedes esperar de esta web?
+        </h3>
+        <ul class="list-disc list-inside text-gray-300 space-y-2 pl-4">
+          <li>Publicaciones técnicas y consejos prácticos.</li>
+          <li>Avances y demostraciones de mis proyectos.</li>
+          <li>Recursos y trucos útiles para otros desarrolladores.</li>
+        </ul>
+
+        <p class="text-gray-400 mt-10 italic text-center">
+          Gracias por visitar este rincón del universo digital. ¡Estoy encantado
+          de que estés aquí!
+        </p>
+      </div>
+    </div>
+  </section>
 </BaseLayout>

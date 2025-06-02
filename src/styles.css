@@ -8,9 +8,11 @@
     scroll-behavior: smooth;
   }
 }
-  .main-container {
-    max-width: 120rem;
-  }
+
+.main-container {
+  max-width: 120rem;
+}
+
 /* Tipografía base */
 @layer base {
   body {
@@ -87,5 +89,44 @@
 @layer utilities {
   .animate-spin-slow {
     animation: spin 8s linear infinite;
+  }
+}
+
+.hover-github:hover {
+  color: #ffffff;
+  /* Blanco puro */
+}
+
+.hover-linkedin:hover {
+  color: #33aaff;
+  /* Azul neón que contrasta más */
+}
+
+.decorative-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.decorative-image {
+  width: 300px;
+  max-width: 90%;
+  border-radius: 1rem;
+  /* bordes ligeramente redondeados */
+  box-shadow: 0 0 40px 10px rgba(59, 130, 246, 0.2);
+  /* luz azul suave */
+  background-color: #111827;
+  /* para integrarse con el fondo */
+  filter: drop-shadow(0 0 20px rgba(100, 100, 255, 0.25));
+  transition: transform 0.3s ease;
+}
+
+.decorative-image:hover {
+  transform: scale(1.03);
+}
+
+@layer utilities {
+  .custom-glow {
+    box-shadow: 0 0 60px rgba(99, 102, 241, 0.15), 0 0 30px rgba(147, 51, 234, 0.15);
   }
 }
